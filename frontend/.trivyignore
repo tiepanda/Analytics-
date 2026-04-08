@@ -1,0 +1,12 @@
+# Accept these vulnerabilities (with justification)
+
+# Development dependencies only
+CVE-2021-23337
+CVE-2021-23343
+
+# False positives or acceptable risk
+CVE-2020-8203
+CVE-2021-3749
+
+# Will be fixed in next update cycle
+CVE-2021-44906

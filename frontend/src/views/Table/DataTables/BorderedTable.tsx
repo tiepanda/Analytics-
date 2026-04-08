@@ -1,0 +1,98 @@
+'use client'
+
+import React, { useMemo } from 'react'
+
+import TableContainer from '@src/components/custom/table/table'
+
+const BasicTable: React.FC = () => {
+  const columns = useMemo(
+    () => [
+      { accessorKey: 'Name', header: 'Name' },
+      { accessorKey: 'Position', header: 'Position' },
+      { accessorKey: 'Office', header: 'Office' },
+      { accessorKey: 'Age', header: 'Age' },
+      { accessorKey: 'StartDate', header: 'Start date' },
+      { accessorKey: 'Salary', header: 'Salary' },
+    ],
+    []
+  )
+
+  return (
+    <>
+      <div className="table-container">
+        <TableContainer
+          columns={columns}
+          data={[
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'John Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+            {
+              Name: 'Jane Doe',
+              Position: 'Software Engineer',
+              Office: 'New York',
+              Age: 30,
+              StartDate: '2021-01-01',
+              Salary: '$100,000',
+            },
+          ]
+        }
+          divClass="overflow-x-auto"
+          tableClass="display group bordered dataTable table whitespace-nowrap dtr-inline"
+          PaginationClassName="pagination-container"
+          isPagination={true}
+          thtrClass="bg-gray-100 dark:bg-dark-850 dt-orderable-asc dt-orderable-desc dt-ordering-desc"
+          isTableFooter={true}
+          classStyle="100%"
+          isSearch={true}
+        />
+      </div>
+    </>
+  )
+}
+
+export default BasicTable
